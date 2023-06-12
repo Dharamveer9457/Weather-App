@@ -4,7 +4,14 @@ const jwt = require("jsonwebtoken");
 require('dotenv').config();
 const redis = require("redis");
 const redisClient = redis.createClient(6379)
-redisClient.on('error', err => console.log('Redis Client Error', err));
+
+redisClient.on('connect', () => {
+    console.log('Connected to Redis');
+  });
+  
+  redisClient.on('error', (error) => {
+    console.error('Redis error:', error);
+  });
 
 const auth = (req,res,next)=>{
 

@@ -2,8 +2,8 @@ const express = require("express");
 const app = express()
 require('dotenv').config()
 const {connection} = require("./config/connection");
-const {userRouter} = require("./routes/userRoutes");
-const {weatherRouter} = require("./routes/weatherRoutes");
+const {userRouter} = require("./routes/user.routes");
+const {weatherRouter} = require("./routes/weather.routes");
 
 const winston = require("winston")
 require('winston-mongodb');
