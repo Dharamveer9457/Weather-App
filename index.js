@@ -8,7 +8,7 @@ const {weatherRouter} = require("./routes/weather.routes");
 const winston = require("winston")
 require('winston-mongodb');
 
-const look = 12345
+const look = 1234
 
 // Winston Logger 
 const logger = winston.createLogger({
